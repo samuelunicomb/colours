@@ -11,27 +11,8 @@ c=float(sys.argv[3])
 b=3 * b / 100.0
 c=-1 + 2 * c / 100.0
 
-blen=len(sys.argv[2])
-clen=len(sys.argv[3])
-
-#if len(sys.argv[2]) == 1:
-#  bname='00'+sys.argv[2]
-#elif len(sys.argv[2]) == 2:
-#  bname='0'+sys.argv[2]
-#elif len(sys.argv[2]) == 3:
-#  bname=sys.argv[2]
-
 bname=sys.argv[2]
-
-#if len(sys.argv[3]) == 1:
-#  cname='00'+sys.argv[3]
-#elif len(sys.argv[3]) == 2:
-#  cname='0'+sys.argv[3]
-#elif len(sys.argv[3]) == 3:
-#  cname=sys.argv[3]
-
 cname=sys.argv[3]
-
 name=sys.argv[1]+'-'+bname+'-'+cname
 
 # create palette
@@ -42,7 +23,8 @@ sns.palplot(pal)
 
 # save figure
 plt.title(name)
-plt.savefig('%s.pdf' % name)
+#plt.rcParams["figure.figsize"] = (20,3)
+plt.savefig('%s.pdf' % name, bbox_inches='tight')
 
 # output figure
 #plt.title(name)
