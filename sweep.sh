@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMSAMPLES=12
+NUMSAMPLES=4
 
 for i in $(seq 0 5 100);
 do

@@ -16,18 +16,16 @@ cname=sys.argv[3]
 name=sys.argv[1]+'-'+bname+'-'+cname
 
 # create palette
-pal = sns.cubehelix_palette(a, start=b, rot=c, light=.98)
+pal = sns.cubehelix_palette(a, start=b, rot=c, light=.95, dark=.2)
 
 # create plot
 sns.palplot(pal)
 
 # save figure
 plt.title(name)
-#plt.rcParams["figure.figsize"] = (20,3)
 plt.savefig('%s.pdf' % name, bbox_inches='tight')
 
 # output figure
-#plt.title(name)
 #plt.show ()
 
 print (pal.as_hex ())
